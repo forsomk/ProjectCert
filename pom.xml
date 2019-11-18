@@ -6,5 +6,6 @@
 
    <groupId>com.projectcert.project-group</groupId>
    <artifactId>projectcert</artifactId>
+   <packaging>jar</packaging>
    <version>1.0</version>
 </project>
