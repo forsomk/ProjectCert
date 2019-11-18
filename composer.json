@@ -1,8 +1,0 @@
-{
-  "name": "ProjectCert",
-  "minimum-stability": "dev",
-  "license": "MIT License",
-  "require": {
-    "php": ">=5.6.0"
-  }
-}
