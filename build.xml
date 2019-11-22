@@ -4,9 +4,6 @@
 	<property name="builder" value="Somashekar" />
 	<property name="war-file-name" value="${project-name}.war" />
 	<property name="source-directory" value="src" />
-	<property name="classes-directory" value="bin" />
-	<property name="web-directory" value="web" />
-	<property name="web-xml-file" value="web/WEB-INF/web.xml" />
 	<tstamp prefix="build-info">
 		<format property="current-date" pattern="d-MMMM-yyyy" locale="en" />
 		<format property="current-time" pattern="hh:mm:ss a z" locale="en" />
@@ -15,11 +12,8 @@
 	<target name="war" depends="">
 		<mkdir dir="${build-directory}" />
 		<delete file="${build-directory}/${war-file-name}" />
-		<war warfile="${build-directory}/${war-file-name}" webxml="${web-xml-file}">
-			<classes dir="${classes-directory}" />
-			<fileset dir="${web-directory}">
-				<!-- Need to exclude it since webxml is an attribute of the war tag above -->
-				<exclude name="WEB-INF/web.xml" />
+		<war warfile="${build-directory}/${war-file-name}" >
+			<fileset dir="${source-directory}">
 			</fileset>
 			<manifest>
 				<attribute name="Built-By" value="${builder}" />
