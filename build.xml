@@ -9,10 +9,10 @@
 		<format property="current-time" pattern="hh:mm:ss a z" locale="en" />
 	</tstamp>
 	<property name="build-directory" value="build" />
-	<target name="war" depends="" needxmlfile="false">
+	<target name="war" depends="">
 		<mkdir dir="${build-directory}" />
 		<delete file="${build-directory}/${war-file-name}" />
-		<war warfile="${build-directory}/${war-file-name}" >
+		<war warfile="${build-directory}/${war-file-name}"  needxmlfile="false">
 			<fileset dir="${source-directory}">
 			</fileset>
 			<manifest>
