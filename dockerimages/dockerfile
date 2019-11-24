@@ -1,4 +1,4 @@
 From tomcat
-ADD  ./build/ProjectCert.war /usr/local/tomcat/webapps/
+ADD  ./ProjectCert.war /usr/local/tomcat/webapps/
 CMD "catalina.sh" "run"
 EXPOSE 8081
