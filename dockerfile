@@ -3,10 +3,10 @@ MAINTAINER Somashekar Kuppuswamy <skuppuswamy@ups.com>
 
 # Install apache, PHP, and supplimentary programs. openssh-server, curl, and lynx-cur are for debugging the container.
 RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-get -y install \
-    apache2 php7.0
+    apache2 php7.2
 
 # Enable apache mods.
-RUN a2enmod php7.0
+RUN a2enmod php7.2
 RUN a2enmod rewrite
 
 # Update the PHP.ini file, enable <? ?> tags and quieten logging.
