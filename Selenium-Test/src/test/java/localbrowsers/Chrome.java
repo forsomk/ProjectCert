@@ -9,9 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-/**
- * Created by andrew on 12/3/16.
- */
+
 @Test(groups = {"windows"})
 public class Chrome {
     private WebDriver driver;
